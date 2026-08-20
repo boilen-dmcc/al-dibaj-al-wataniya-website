@@ -8,7 +8,9 @@ export default function Footer() {
     <footer className="bg-charcoal-950 text-offwhite pt-20 pb-8 border-t border-bronze-700/30">
       <div className="container-adw grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-14">
         <div>
-          <img src={logo} alt="ADW — Al Dibaj Al Wataniya logo" className="h-10 w-auto mb-5" />
+          <div className="inline-block bg-white px-4 py-3 mb-5">
+            <img src={logo} alt="ADW — Al Dibaj Al Wataniya logo" className="h-9 w-auto" />
+          </div>
           <p className="text-offwhite/60 text-sm leading-relaxed max-w-xs">
             {company.nameFull} — {company.tagline}.
           </p>
