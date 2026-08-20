@@ -1,5 +1,5 @@
 import { industries } from '../data/content'
-import SceneImage from '../components/SceneImage'
+import PhotoImage from '../components/PhotoImage'
 import { useRevealOnScroll } from '../hooks/useReveal'
 
 export default function Industries() {
@@ -24,11 +24,12 @@ export default function Industries() {
               className="reveal group relative overflow-hidden bg-charcoal-950 aspect-square"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <SceneImage
-                scene={ind.scene}
-                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-700"
+              <PhotoImage
+                photo={ind.photo}
+                alt={`${ind.title} — sector served by ADW`}
+                className="absolute inset-0 w-full h-full object-cover opacity-90 object-bottom group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-charcoal-950/50 group-hover:bg-charcoal-950/30 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/85 via-charcoal-950/35 to-charcoal-950/10 group-hover:from-charcoal-950/70 transition-colors duration-500" />
               <div className="relative h-full flex flex-col justify-between p-7">
                 <span className="text-[11px] tracking-[0.25em] uppercase text-bronze-300/80 font-semibold">
                   {String(i + 1).padStart(2, '0')}

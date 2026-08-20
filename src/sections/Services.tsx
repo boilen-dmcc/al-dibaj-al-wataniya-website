@@ -1,5 +1,5 @@
 import { services } from '../data/content'
-import SceneImage from '../components/SceneImage'
+import PhotoImage from '../components/PhotoImage'
 import { IconDerrick, IconContract, IconSupply, IconTrade, IconEnergy, IconProject, IconArrowRight } from '../components/icons'
 import { useRevealOnScroll } from '../hooks/useReveal'
 
@@ -38,11 +38,12 @@ export default function Services() {
                 className="reveal group relative overflow-hidden bg-charcoal-950 aspect-[4/5]"
                 style={{ transitionDelay: `${i * 70}ms` }}
               >
-                <SceneImage
-                  scene={s.scene}
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 ease-out"
+                <PhotoImage
+                  photo={s.photo}
+                  alt={`${s.title} — ADW onshore Oil & Gas and industrial operations`}
+                  className="absolute inset-0 w-full h-full object-cover opacity-95 object-bottom group-hover:scale-105 transition-all duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/60 to-charcoal-950/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/65 to-charcoal-950/25" />
                 <div className="relative h-full flex flex-col justify-end p-7">
                   <Icon className="w-9 h-9 text-bronze-300 mb-4 transition-transform duration-500 group-hover:-translate-y-1" />
                   <h3 className="font-display text-2xl text-offwhite mb-2">{s.title}</h3>

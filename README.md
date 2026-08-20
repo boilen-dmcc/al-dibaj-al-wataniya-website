@@ -8,14 +8,16 @@ Built with **React + Vite + TypeScript + Tailwind CSS v4**. Fully static —
 no backend, no API keys required. Deploys cleanly to GitHub Pages and works
 just as well behind a custom domain (Hostinger DNS → GitHub Pages).
 
-> **Note on imagery:** this build environment does not have general internet
-> access, so all section imagery is a set of original, hand-built SVG
-> illustrations (pumpjacks, refinery towers, storage tanks, pipelines, a
-> drilling derrick, PPE-equipped workers) styled in the ADW charcoal/bronze
-> palette — deliberately land-based/onshore only, per the brand brief. They
-> are lightweight, load instantly, and never break. If you'd like to swap
-> any of them for real photography later, see **"Where to edit"** below —
-> every illustration is isolated in `src/components/illustrations/`.
+> **Note on imagery:** all section photography is real, land-based (onshore)
+> Oil & Gas and industrial photography — pumpjacks, refineries, storage
+> tanks, a desert pipeline, a land drilling rig, and PPE-equipped workers —
+> sourced from Wikimedia Commons under free/CC licensing. No offshore or
+> marine imagery is used anywhere, per the brand brief. The photos live in
+> `src/assets/photos/` and are mapped to sections in `src/data/content.ts`
+> (see **"Where to edit"** below). An original set of hand-built SVG
+> illustrations in the same charcoal/bronze palette also ships in
+> `src/components/illustrations/` as a lightweight fallback/alternative if
+> you ever want to swap back.
 
 ---
 
@@ -132,9 +134,10 @@ need to touch component code for routine updates:
 | HSE points | `src/data/content.ts` → `hsePoints` |
 | About Us paragraph text, Hero headline/subheading | `src/sections/About.tsx`, `src/sections/Hero.tsx` |
 | Page title / meta description / Open Graph tags / structured data | `index.html` |
-| Logo | `src/assets/adw-logo.png` and `public/adw-logo.png` (replace the file, keep the same name, or update the import in `src/components/Navbar.tsx` and `src/components/Footer.tsx`) |
+| Logo | `src/assets/adw-logo.png` and `public/adw-logo.png` — transparent background, replace the file keeping the same name (or update the import in `src/components/Navbar.tsx` and `src/components/Footer.tsx`) |
 | Favicons | `public/favicon-*.png` (regenerate from a new logo file at 16/32/180/192/512px) |
-| Section illustrations (pumpjacks, refinery, pipeline, desert rig, PPE workers) | `src/components/illustrations/HeroScene.tsx` and `src/components/illustrations/Scenes.tsx` — or replace with real photography by dropping images into `src/assets/` and swapping the `<SceneImage />` usages for `<img>` tags |
+| Section photography (pumpjacks, refinery, pipeline, desert rig, PPE workers) | Photo files live in `src/assets/photos/`, registered in `src/components/PhotoImage.tsx`. To swap one out, drop a new image into that folder, add it to the `photos` object in `PhotoImage.tsx`, then point the relevant `photo:` key in `src/data/content.ts` (for Services/Industries/Capabilities) — or the `photos.xxx` reference directly in `Hero.tsx` / `About.tsx` / `HSE.tsx` / `CTA.tsx` — at the new key |
+| Decorative SVG illustrations (alternative to photography) | `src/components/illustrations/HeroScene.tsx` and `src/components/illustrations/Scenes.tsx` — not currently used on the page, kept as a fallback |
 | Brand colours (charcoal / bronze-gold palette) | `src/index.css` → the `@theme` block at the top |
 | Fonts | `src/index.css` → the Google Fonts `@import` line and `--font-display` / `--font-sans` variables |
 

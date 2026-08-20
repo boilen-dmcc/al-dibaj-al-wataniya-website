@@ -1,9 +1,13 @@
-import { DesertRigScene } from '../components/illustrations/Scenes'
+import { photos } from '../components/PhotoImage'
 
 export default function CTA() {
   return (
     <section className="relative py-28 lg:py-36 overflow-hidden bg-charcoal-950">
-      <DesertRigScene className="absolute inset-0 w-full h-full object-cover opacity-40" />
+      <img
+        src={photos.drillingRig}
+        alt="Onshore land drilling rig representing ADW's oil and gas contracting operations"
+        className="photo-grade absolute inset-0 w-full h-full object-cover opacity-50"
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950 via-charcoal-950/85 to-charcoal-950/60" />
 
       <div className="relative container-adw text-center max-w-2xl mx-auto">

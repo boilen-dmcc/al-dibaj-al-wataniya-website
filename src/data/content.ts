@@ -53,47 +53,47 @@ export const services = [
     title: 'Oil & Gas Services',
     description: 'Solutions supporting oil and gas operations and infrastructure.',
     icon: 'derrick',
-    scene: 'pumpjack',
+    photo: 'drillingRig',
   },
   {
     title: 'General Contracting',
     description: 'Professional contracting and project support solutions.',
     icon: 'contract',
-    scene: 'refinery',
+    photo: 'construction',
   },
   {
     title: 'Industrial Supply',
     description: 'Supply and sourcing of equipment, materials and industrial products.',
     icon: 'supply',
-    scene: 'pipeline',
+    photo: 'storageTanks',
   },
   {
     title: 'Trading & Procurement',
     description: 'Reliable sourcing and procurement for industrial requirements.',
     icon: 'trade',
-    scene: 'desert',
+    photo: 'refineryB',
   },
   {
     title: 'Energy Sector Support',
     description: 'Services and supplies supporting energy and industrial operations.',
     icon: 'energy',
-    scene: 'refinery',
+    photo: 'refineryA',
   },
   {
     title: 'Project Support',
     description: 'Professional coordination and support for industrial projects.',
     icon: 'project',
-    scene: 'pumpjack',
+    photo: 'pipelineDesert',
   },
 ] as const
 
 export const industries = [
-  { title: 'Oil & Gas', scene: 'pumpjack' },
-  { title: 'Energy', scene: 'refinery' },
-  { title: 'Industrial', scene: 'pipeline' },
-  { title: 'Construction', scene: 'desert' },
-  { title: 'Infrastructure', scene: 'pipeline' },
-  { title: 'General Trading', scene: 'refinery' },
+  { title: 'Oil & Gas', photo: 'pumpjackAlt' },
+  { title: 'Energy', photo: 'refineryA' },
+  { title: 'Industrial', photo: 'storageTanks' },
+  { title: 'Construction', photo: 'construction' },
+  { title: 'Infrastructure', photo: 'pipelineDesert' },
+  { title: 'General Trading', photo: 'compressorStation' },
 ] as const
 
 export const whyChooseAdw = [
@@ -130,11 +130,11 @@ export const whyChooseAdw = [
 ] as const
 
 export const capabilities = [
-  { title: 'Oil & Gas Facilities', scene: 'pumpjack', description: 'Support across onshore oil and gas facility requirements.' },
-  { title: 'Industrial Infrastructure', scene: 'pipeline', description: 'Coordination for industrial and infrastructure works.' },
-  { title: 'Energy Projects', scene: 'refinery', description: 'Support for energy sector project requirements.' },
-  { title: 'Procurement & Supply', scene: 'desert', description: 'Sourcing and supply of industrial materials and equipment.' },
-  { title: 'Contracting Operations', scene: 'pumpjack', description: 'Professional contracting and operational support.' },
+  { title: 'Oil & Gas Facilities', photo: 'drillingRig', description: 'Support across onshore oil and gas facility requirements.' },
+  { title: 'Industrial Infrastructure', photo: 'pipelineDesert', description: 'Coordination for industrial and infrastructure works.' },
+  { title: 'Energy Projects', photo: 'refineryB', description: 'Support for energy sector project requirements.' },
+  { title: 'Procurement & Supply', photo: 'storageTanks', description: 'Sourcing and supply of industrial materials and equipment.' },
+  { title: 'Contracting Operations', photo: 'construction', description: 'Professional contracting and operational support.' },
 ] as const
 
 export const hsePoints = [

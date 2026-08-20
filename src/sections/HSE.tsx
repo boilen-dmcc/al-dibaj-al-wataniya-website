@@ -1,5 +1,5 @@
 import { hsePoints } from '../data/content'
-import { PPEWorkersScene } from '../components/illustrations/Scenes'
+import { photos } from '../components/PhotoImage'
 import { IconShield, IconApproach, IconAlert, IconLeaf } from '../components/icons'
 import { useRevealOnScroll } from '../hooks/useReveal'
 
@@ -40,7 +40,11 @@ export default function HSE() {
 
         <div className="reveal relative">
           <div className="relative aspect-[4/5] overflow-hidden shadow-2xl">
-            <PPEWorkersScene className="w-full h-full object-cover" />
+            <img
+              src={photos.ppeWorkers}
+              alt="Workers wearing PPE and hard hats at an onshore industrial site"
+              className="photo-grade w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/60 via-transparent to-transparent" />
           </div>
           <div className="absolute -top-6 -left-6 w-24 h-24 border-t-2 border-l-2 border-bronze-400" />

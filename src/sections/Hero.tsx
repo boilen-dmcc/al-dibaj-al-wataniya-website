@@ -1,10 +1,14 @@
-import HeroScene from '../components/illustrations/HeroScene'
+import { photos } from '../components/PhotoImage'
 import { IconArrowRight } from '../components/icons'
 
 export default function Hero() {
   return (
     <section id="home" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-charcoal-950">
-      <HeroScene className="absolute inset-0 w-full h-full" />
+      <img
+        src={photos.pumpjackMain}
+        alt="Onshore oil pumpjack at sunset, representing ADW's land-based Oil & Gas operations"
+        className="photo-grade absolute inset-0 w-full h-full object-cover"
+      />
 
       {/* cinematic overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/70 to-charcoal-950/30" />

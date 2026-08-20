@@ -1,5 +1,5 @@
 import { aboutValues, company } from '../data/content'
-import { PumpjackFieldScene } from '../components/illustrations/Scenes'
+import { photos } from '../components/PhotoImage'
 import { IconReliable, IconQuality, IconShield, IconPartnership } from '../components/icons'
 import { useRevealOnScroll } from '../hooks/useReveal'
 
@@ -12,7 +12,11 @@ export default function About() {
       <div className="container-adw grid lg:grid-cols-2 gap-16 items-center">
         <div className="reveal relative order-2 lg:order-1">
           <div className="relative aspect-[4/5] overflow-hidden border border-charcoal-800/10 shadow-2xl">
-            <PumpjackFieldScene className="w-full h-full object-cover" />
+            <img
+              src={photos.pumpjackAlt}
+              alt="Onshore oil field landscape reflecting ADW's roots in Iraq's land-based energy sector"
+              className="photo-grade w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/50 to-transparent" />
           </div>
           <div className="hidden sm:flex absolute -bottom-8 -right-6 lg:-right-10 bg-charcoal-950 text-offwhite px-8 py-6 max-w-[240px] shadow-xl border-l-2 border-bronze-400">

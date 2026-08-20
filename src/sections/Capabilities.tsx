@@ -1,5 +1,5 @@
 import { capabilities } from '../data/content'
-import SceneImage from '../components/SceneImage'
+import PhotoImage from '../components/PhotoImage'
 import { IconArrowRight } from '../components/icons'
 import { useRevealOnScroll } from '../hooks/useReveal'
 
@@ -30,9 +30,10 @@ export default function Capabilities() {
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <div className="relative h-40 sm:h-auto overflow-hidden">
-                <SceneImage
-                  scene={c.scene}
-                  className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700"
+                <PhotoImage
+                  photo={c.photo}
+                  alt={`${c.title} — ADW capability area`}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-charcoal-950/25" />
               </div>

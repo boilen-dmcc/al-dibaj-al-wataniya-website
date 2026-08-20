@@ -86,6 +86,13 @@ body {
   transform: translateY(0);
 }
 
+/* Unifies photography sourced from different origins into one consistent,
+   slightly warm, higher-contrast look that matches the bronze/charcoal
+   brand palette, instead of each photo's raw, inconsistent color cast. */
+.photo-grade {
+  filter: saturate(1.2) contrast(1.12) sepia(0.1) brightness(0.96);
+}
+
 .gold-line {
   height: 2px;
   width: 64px;
