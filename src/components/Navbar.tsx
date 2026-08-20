@@ -41,7 +41,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        
+        <a
           href="#contact"
           className="hidden lg:inline-flex items-center gap-2 border border-bronze-500 text-bronze-600 px-6 py-2.5 text-sm font-semibold tracking-wide uppercase hover:bg-bronze-500 hover:text-white transition-colors duration-300"
         >
@@ -69,7 +69,7 @@ export default function Navbar() {
       <ul className="flex flex-col px-6 py-8 gap-1">
         {navLinks.map((link, i) => (
           <li key={link.href} style={{ transitionDelay: `${i * 40}ms` }}>
-            
+            <a
               href={link.href}
               onClick={() => setOpen(false)}
               className="block py-4 text-xl font-display text-charcoal-900 border-b border-charcoal-800/10 hover:text-bronze-600 transition-colors"
